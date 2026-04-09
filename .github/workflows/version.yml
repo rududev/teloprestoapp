@@ -22,7 +22,7 @@ jobs:
         run: |
           COUNT=$(git rev-list --count HEAD)
           echo "count=$COUNT" >> $GITHUB_OUTPUT
-          echo "version=0.01.$(printf '%04d' $COUNT)" >> $GITHUB_OUTPUT
+          echo "version=0.02.$(printf '%04d' $COUNT)" >> $GITHUB_OUTPUT
 
       - name: Update README badge
         run: |
