@@ -7,6 +7,8 @@
 Aplicación Android para la gestión de préstamos cotidianos de objetos entre personas.
 
 ---
+## 📥 Descarga
+[⬇️ Descargar APK v0.02.0001](https://github.com/rududev/teloprestoapp/releases/latest)
 
 ## Descripción
 
