@@ -1,6 +1,6 @@
 # TeLoPresto 📦
 
-![Version](https://img.shields.io/badge/versión-0.02.0008-blue)
+![Version](https://img.shields.io/badge/versión-0.02.0015-blue)
 ![API](https://img.shields.io/badge/API-26%2B-green)
 ![Platform](https://img.shields.io/badge/platform-Android-brightgreen)
 
