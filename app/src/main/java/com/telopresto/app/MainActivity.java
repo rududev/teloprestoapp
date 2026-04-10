@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private PrestamoAdapter adapter;
     private TextView textViewVacio;
     private RecyclerView recyclerView;
+    private PrestamoViewModel viewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
 
-        PrestamoViewModel viewModel = new ViewModelProvider(this).get(PrestamoViewModel.class);
+        viewModel = new ViewModelProvider(this).get(PrestamoViewModel.class);
         viewModel.obtenerActivosConDetalles().observe(this, prestamos -> {
             if (prestamos == null || prestamos.isEmpty()) {
                 recyclerView.setVisibility(View.GONE);
@@ -101,11 +102,22 @@ public class MainActivity extends AppCompatActivity {
         }
         recyclerView.setVisibility(View.VISIBLE);
     }
+
     @Override
     protected void onResume() {
         super.onResume();
         mostrarInicio();
         BottomNavigationView bottomNav = findViewById(R.id.bottomNavigation);
         bottomNav.setSelectedItemId(R.id.nav_inicio);
+        viewModel.obtenerActivosConDetalles().observe(this, prestamos -> {
+            if (prestamos == null || prestamos.isEmpty()) {
+                recyclerView.setVisibility(View.GONE);
+                textViewVacio.setVisibility(View.VISIBLE);
+            } else {
+                recyclerView.setVisibility(View.VISIBLE);
+                textViewVacio.setVisibility(View.GONE);
+                adapter.setPrestamos(prestamos);
+            }
+        });
     }
 }
