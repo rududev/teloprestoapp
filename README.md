@@ -8,7 +8,7 @@ Aplicación Android para la gestión de préstamos cotidianos de objetos entre p
 
 ---
 ## 📥 Descarga
-[⬇️ Descargar APK v0.02.0001](https://github.com/rududev/teloprestoapp/releases/latest)
+[⬇️ Descargar APK v0.02](https://github.com/rududev/teloprestoapp/releases/latest)
 
 ## Descripción
 
@@ -69,7 +69,7 @@ app/src/main/java/com/telopresto/app/
 
 1. Clona el repositorio:
 ```bash
-git clone https://github.com/rududev/TeLoPresto.git
+git clone https://github.com/rududev/teloprestoapp.git
 ```
 2. Abre el proyecto en Android Studio
 3. Sincroniza las dependencias con Gradle
